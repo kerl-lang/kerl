@@ -1,0 +1,161 @@
+# Variáveis e tipos
+var nome = "Kerl"
+var versao = 1
+var ativo = true
+var vazio = null
+
+print("=== Kerl Language v0.4.0===")
+print("Nome:", nome)
+print("Versão:", versao)
+print("Ativo:", ativo)
+
+# Operações matemáticas
+var a = 10
+var b = 3
+print("\n--- Matemática ---")
+print("Soma:", a + b)
+print("Sub:", a - b)
+print("Mul:", a * b)
+print("Div:", a / b)
+print("Mod:", a % b)
+
+# Strings
+var saudacao = "Olá, " + nome + "!"
+print("\n--- Strings ---")
+print(saudacao)
+print("Tamanho:", len(saudacao))
+print("Maiúsculo:", upper(saudacao))
+
+# Condicionais
+print("\n--- Condicionais ---")
+var nota = 8
+
+if nota >= 9 {
+    print("Aprovado com excelência!")
+} elif nota >= 7 {
+    print("Aprovado!")
+} elif nota >= 5 {
+    print("Recuperação")
+} else {
+    print("Reprovado")
+}
+
+# Arrays
+print("\n--- Arrays ---")
+var frutas = ["maçã", "banana", "laranja", "uva"]
+print("Frutas:", frutas)
+print("Primeira:", frutas[0])
+print("Total:", len(frutas))
+
+push(frutas, "manga")
+print("Após push:", frutas)
+
+for fruta in frutas {
+    print(" -", fruta)
+}
+
+# Dicionários
+print("\n--- Dicionários ---")
+var pessoa = {"nome": "Walk", "idade": 20, "linguagem": "Kerl"}
+print("Pessoa:", pessoa)
+print("Nome:", pessoa["nome"])
+
+for chave in keys(pessoa) {
+    print(" ", chave, "=", pessoa[chave])
+}
+
+# Funções
+print("\n--- Funções ---")
+
+func fatorial(n) {
+    if n <= 1 {
+        return 1
+    }
+    return n * fatorial(n - 1)
+}
+
+func fibonacci(n) {
+    if n <= 1 {
+        return n
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+func somar_lista(lista) {
+    var total = 0
+    for item in lista {
+        total = total + item
+    }
+    return total
+}
+
+print("5! =", fatorial(5))
+print("10! =", fatorial(10))
+print("Fib(8) =", fibonacci(8))
+
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("Soma 1-10:", somar_lista(numeros))
+
+# Loops
+print("\n--- Loops ---")
+
+var i = 0
+var soma = 0
+while i < 5 {
+    soma = soma + i
+    i = i + 1
+}
+print("Soma while (0-4):", soma)
+
+for n in range(1, 6) {
+    print(" range:", n)
+}
+
+# Funções de ordem superior (simuladas)
+print("\n--- Processamento de dados ---")
+
+func filtrar_maiores(lista, limite) {
+    var resultado = []
+    for item in lista {
+        if item > limite {
+            push(resultado, item)
+        }
+    }
+    return resultado
+}
+
+func mapear_dobro(lista) {
+    var resultado = []
+    for item in lista {
+        push(resultado, item * 2)
+    }
+    return resultado
+}
+
+var dados = [3, 7, 1, 9, 4, 6, 2, 8, 5]
+print("Dados:", dados)
+print("Maiores que 5:", filtrar_maiores(dados, 5))
+print("Dobro de cada:", mapear_dobro(dados))
+
+# Closures / funções retornando valores
+print("\n--- Funções avançadas ---")
+
+func criar_contador(inicio) {
+    var count = inicio
+    return count
+}
+
+func potencia(base, exp) {
+    var resultado = 1
+    var i = 0
+    while i < exp {
+        resultado = resultado * base
+        i = i + 1
+    }
+    return resultado
+}
+
+print("2^10 =", potencia(2, 10))
+print("3^5 =", potencia(3, 5))
+
+print("\n=== Kerl rodando perfeitamente! ===")

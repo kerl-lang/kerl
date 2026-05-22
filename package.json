@@ -1,0 +1,22 @@
+{
+  "name": "kerl",
+  "version": "0.4.0",
+  "description": "Kerl — A minimalist reactive programming language (.ke)",
+  "main": "dist/kerl.js",
+  "bin": { "kerl": "./dist/kerl.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/kerl.js",
+    "dev": "ts-node src/kerl.ts",
+    "repl": "ts-node src/kerl.ts repl",
+    "test": "ts-node src/kerl.ts examples/test.ke"
+  },
+  "keywords": ["language", "interpreter", "kerl", "reactive"],
+  "author": "Dylan J. Walker",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}

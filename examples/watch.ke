@@ -1,0 +1,34 @@
+print("=== Watch Reativo ===")
+
+var x = 10
+
+func calcDobro(v) {
+    print("x mudou para:", v)
+    return v * 2
+}
+
+var dobro = watch(x, calcDobro)
+print("dobro inicial:", dobro)
+
+x = 20
+print("dobro agora:", dobro)
+
+x = 5
+print("dobro agora:", dobro)
+
+print("")
+print("=== Conversão de temperatura ===")
+
+var temperatura_c = 0
+
+func converterParaF(v) {
+    return v * 9 / 5 + 32
+}
+
+var temperatura_f = watch(temperatura_c, converterParaF)
+
+print("0°C =", temperatura_f, "°F")
+temperatura_c = 100
+print("100°C =", temperatura_f, "°F")
+temperatura_c = 37
+print("37°C =", temperatura_f, "°F")

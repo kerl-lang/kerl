@@ -1,0 +1,43 @@
+func bubble_sort(lista) {
+    var n = len(lista)
+    var i = 0
+    while i < n {
+        var j = 0
+        while j < n - i - 1 {
+            if lista[j] > lista[j + 1] {
+                var temp = lista[j]
+                lista[j] = lista[j + 1]
+                lista[j + 1] = temp
+            }
+            j = j + 1
+        }
+        i = i + 1
+    }
+    return lista
+}
+
+func binary_search(lista, alvo) {
+    var esq = 0
+    var dir = len(lista) - 1
+    while esq <= dir {
+        var meio = (esq + dir) / 2
+        var meio_int = num(str(meio))
+        if lista[meio_int] == alvo {
+            return meio_int
+        } elif lista[meio_int] < alvo {
+            esq = meio_int + 1
+        } else {
+            dir = meio_int - 1
+        }
+    }
+    return -1
+}
+
+var dados = [64, 34, 25, 12, 22, 11, 90, 3, 47, 55]
+print("Original:", dados)
+
+var ordenado = bubble_sort(dados)
+print("Ordenado:", ordenado)
+
+print("\nBusca binária por 47:", binary_search(ordenado, 47))
+print("Busca binária por 99:", binary_search(ordenado, 99))

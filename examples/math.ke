@@ -1,0 +1,31 @@
+func soma(a, b) {
+    return a + b
+}
+func subtrair(a, b) {
+    return a - b
+}
+func multiplicar(a, b) {
+    return a * b
+}
+func dividir(a, b) {
+    if b == 0 {
+        return null
+    }
+    return a / b
+}
+func potencia(base, exp) {
+    var resultado = 1
+    var i = 0
+    while i < exp {
+        resultado = resultado * base
+        i = i + 1
+    }
+    return resultado
+}
+func fatorial(n) {
+    if n <= 1 {
+        return 1
+    }
+    return n * fatorial(n - 1)
+}
+var PI = 3.14159265358979

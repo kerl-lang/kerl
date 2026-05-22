@@ -1,0 +1,4 @@
+var math = load("./math.ke")
+print("soma(3, 4) =", math.soma(3, 4))
+print("fatorial(6) =", math.fatorial(6))
+print("PI =", math.PI)
