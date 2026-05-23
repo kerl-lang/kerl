@@ -244,4 +244,4 @@ npm run repl # Start REPL via ts-node
 
 ## License
 
-MIT © Dylan J. Walker / NanoSoft
+MIT © Dylan J. Walker
