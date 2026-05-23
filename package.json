@@ -1,7 +1,7 @@
 {
   "name": "kerl",
   "version": "0.4.0",
-  "description": "Kerl — A minimalist reactive programming language (.ke)",
+  "description": "Kerl is a minimalist language with native reactivity. Scripts, automations and servers with a clean syntax.",
   "main": "dist/kerl.js",
   "bin": { "kerl": "./dist/kerl.js" },
   "scripts": {
