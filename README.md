@@ -5,8 +5,9 @@
 <h1 align="center">Kerl</h1>
 
 <p align="center">
-  A minimalist, dynamically-typed scripting language with built-in reactive programming support.<br/>
-  Write clean, expressive code with a GdScript, Python and Go like syntax — and let variables react to changes automatically.
+ Kerl is a minimalist language with native reactivity.
+<br/>
+  Scripts, automations and servers with a clean syntax.
 </p>
 
 <p align="center">
