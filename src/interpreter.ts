@@ -1,6 +1,6 @@
 /*
 @ NanoSoft - 22/05/2026
-@ The person responsible for the update is Dev Dylan, the creator of the language, who believes in the future of NanoSoft. 
+@ The person responsible for the update is Dev Dylan, the creator of the language.
 */
 
 import * as fs from 'fs';
